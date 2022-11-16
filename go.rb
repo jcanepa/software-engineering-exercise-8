@@ -12,7 +12,7 @@ class Go
     # [pretend there's code here]
   end
 
-  def get_score()
+  def get_results()
     return "[pretend these are go results]"
   end
 end

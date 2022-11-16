@@ -18,4 +18,7 @@ puts
 pg = PlayGames.new(3, [["alice", "white"], ["bob", "black"]])
 pg.play()
 
-# add a game class
+# add a game super-class
+# players = ["alice", "bob", "chris", "dave"]
+# game = Poker.new(players)
+# game.play()

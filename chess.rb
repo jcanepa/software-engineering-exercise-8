@@ -3,7 +3,7 @@ class Chess
     @players = players
   end
 
-  def play_game()
+  def play()
     puts "Players in the chess game:"
     @players.length().times { |x| puts "#{self.get_player_name(x)}: #{@players[x][1]}" }
     # [pretend there's code here]

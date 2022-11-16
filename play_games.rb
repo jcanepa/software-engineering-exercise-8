@@ -9,16 +9,16 @@ class PlayGames
     case @game_number
     when 1
       poker = Poker.new(@player_list)
-      poker.play_poker()
+      poker.play()
       puts poker.get_results()
     when 2
       chess = Chess.new(@player_list)
-      chess.play_game()
+      chess.play()
       puts chess.get_results()
     when 3
       go = Go.new(@player_list)
       go.play()
-      puts go.get_score()
+      puts go.get_results()
     end
   end
 end
