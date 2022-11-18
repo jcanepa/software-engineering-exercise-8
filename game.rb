@@ -1,5 +1,4 @@
 class Game
-
   attr_reader :players
 
   def initialize(players)
@@ -7,10 +6,10 @@ class Game
   end
 
   def play()
-    puts 'Please implement this method'
+    raise NotImplementedError, 'Game subclass should implement this method'
   end
 
   def get_results()
-    puts 'Please implement this method'
+    raise NotImplementedError, 'Game subclass should implement this method'
   end
 end
