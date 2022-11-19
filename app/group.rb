@@ -1,21 +1,20 @@
-
 class Group
   attr_reader :collection
 
-  def initialize(players, colors=[nil])
-    colors = Array.new(players.length) { |i| nil } if colors[0] == nil
+  def initialize(names, colors=[nil])
+    if colors[0] == nil
+      colors = Array.new(names.length) { |i| nil }
+    end
 
     @collection = []
 
-    players.zip(colors).each do |player, color|
-      player = Player.new(player, color)
+    names.zip(colors).each do |name, color|
+      player = Player.new(name, color)
       @collection.append(player)
     end
   end
 
-  def count()
-    @collection.length
-  end
+  def count() @collection.length end
 
   def print_player_names()
     for p in @collection do
@@ -24,6 +23,7 @@ class Group
   end
 
   def print_player_names_with(iterable)
+    return if iterable.length != self.count
     @collection.zip(iterable).each do |player, it|
       puts "#{player.name} #{it}"
     end

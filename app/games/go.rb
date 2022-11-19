@@ -3,7 +3,7 @@ require_relative 'game'
 class Go < Game
 
   def play()
-    puts 'Players in the go game:'
+    super
     @players.print_player_names()
     # [pretend there's code here]
   end
