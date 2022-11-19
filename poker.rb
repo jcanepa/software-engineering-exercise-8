@@ -2,10 +2,10 @@ require_relative 'game'
 
 class Poker < Game
 
-  attr_reader :players, :hands
+  attr_reader :hands
 
   def initialize(players)
-    @players = players
+    super
     @hands = Array.new(players.length) { |i| nil }
   end
 
