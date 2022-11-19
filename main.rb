@@ -1,23 +1,23 @@
 #! /usr/bin/env ruby
 
-require_relative 'poker'
-require_relative 'chess'
-require_relative 'go'
 require_relative 'player'
+require_relative 'poker'
+require_relative 'go'
+require_relative 'chess'
 
 poker_players = [
-  Player.new('alice'),
-  Player.new('bob'),
-  Player.new('chris'),
-  Player.new('dave')]
+  Player.new('Alexandria'),
+  Player.new('Natalie'),
+  Player.new('Jenny'),
+  Player.new('Ian')]
 
 go_players = [
-  Player.new('alice','white'),
-  Player.new('bob', 'black')]
+  Player.new('Alexandria','white'),
+  Player.new('Natalie', 'black')]
 
 chess_players = [
-  Player.new('alice','white'),
-  Player.new('bob', 'black')]
+  Player.new('Alexandria','white'),
+  Player.new('Natalie', 'black')]
 
 sessions = [Poker, Go, Chess].zip(
   [poker_players, go_players, chess_players])
