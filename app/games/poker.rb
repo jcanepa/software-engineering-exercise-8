@@ -6,13 +6,14 @@ class Poker < Game
 
   def initialize(players)
     super
-    @hands = Array.new(players.length) { |i| nil }
+    @hands = Array.new(players.count) { |i| nil }
   end
 
   def play()
     puts 'Players in the poker game:'
     # print players & their hands
-    @players.length().times { |i| puts "#{self.players[i].name}, hand: #{self.get_player_hand(i)}" }
+    # @players.count().times { |i| print_infoputs "#{self.players.print_info()}, hand: #{self.get_player_hand(i)}" }
+    @players.print_player_names()
     # [pretend there's code here]
   end
 
@@ -22,5 +23,12 @@ class Poker < Game
 
   def get_player_hand(i)
     return @hands[i]
+  end
+
+  def print_player_names()
+    @players.each do |p, i|
+      p.print_info
+      @hands[i]
+    end
   end
 end

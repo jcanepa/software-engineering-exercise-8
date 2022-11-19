@@ -4,7 +4,7 @@ class Go < Game
 
   def play()
     puts 'Players in the go game:'
-    self.print_players()
+    @players.print_player_names()
     # [pretend there's code here]
   end
 

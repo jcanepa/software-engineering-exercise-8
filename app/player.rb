@@ -5,4 +5,8 @@ class Player
     @name = name
     @color = color
   end
+
+  def print_info()
+    puts @name, @color
+  end
 end

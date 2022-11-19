@@ -4,7 +4,7 @@ class Chess < Game
 
   def play()
     puts "Players in the chess game:"
-    self.print_players()
+    @players.print_player_names()
     # [pretend there's code here]
   end
 
