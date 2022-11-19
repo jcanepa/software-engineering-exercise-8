@@ -3,20 +3,19 @@
 require_relative 'poker'
 require_relative 'chess'
 require_relative 'go'
-
-# single game play
-# players = ['alice', 'bob', 'chris', 'dave']
-# game = Poker.new(players)
-# game.play()
-# puts
+require_relative 'player'
 
 # play all games
 games = [Poker, Go, Chess]
 
+poker_players = [Player.new('alice'), Player.new('bob'), Player.new('chris'), Player.new('dave')]
+go_players =   [Player.new('alice', 'white'), Player.new('bob', 'black')]
+chess_players =   [Player.new('alice', 'white'), Player.new('bob', 'black')]
+
 player_groups = [
-  ['alice', 'bob', 'chris', 'dave'],
-  [['alice', 'white'], ['bob', 'black']],
-  [['alice', 'white'], ['bob', 'black']]
+  poker_players,
+  go_players,
+  chess_players
 ]
 
 games.zip(player_groups).each do |game, p|

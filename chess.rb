@@ -7,7 +7,6 @@ class Chess < Game
 
   def play()
     puts "Players in the chess game:"
-    @players.length().times { |x| puts "#{self.get_player_name(x)}: #{@players[x][1]}" }
     # [pretend there's code here]
   end
 
@@ -15,7 +14,10 @@ class Chess < Game
     return "[pretend these are chess results]"
   end
 
-  def get_player_name(i)
-    @players[i][0]
+  def print_players()
+    # list player names
+    for p in @players do
+      puts p.name
+    end
   end
 end
