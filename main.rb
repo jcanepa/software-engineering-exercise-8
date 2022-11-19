@@ -1,9 +1,9 @@
 #! /usr/bin/env ruby
 
-require_relative 'player'
-require_relative 'poker'
-require_relative 'go'
-require_relative 'chess'
+require_relative 'app/player'
+require_relative 'app/games/poker'
+require_relative 'app/games/go'
+require_relative 'app/games/chess'
 
 poker_players = [
   Player.new('Alexandria'),
