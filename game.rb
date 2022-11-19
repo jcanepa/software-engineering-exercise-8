@@ -15,4 +15,12 @@ class Game
   def get_results()
     raise NotImplementedError, 'Game subclass should implement this method'
   end
+
+  # print player names
+  def print_players()
+    for p in @players do
+      puts p.name
+      puts p.color unless p.color == nil
+    end
+  end
 end

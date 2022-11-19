@@ -6,13 +6,13 @@ class Poker < Game
 
   def initialize(players)
     @players = players
-    @hands = Array.new(players.length) {|i| nil }
+    @hands = Array.new(players.length) { |i| nil }
   end
 
   def play()
     puts 'Players in the poker game:'
     # print players & their hands
-    @players.length().times { |i| puts "#{self.get_player_name(i)}: #{self.get_player_hand(i)}" }
+    @players.length().times { |i| puts "#{self.players[i].name}, hand: #{self.get_player_hand(i)}" }
     # [pretend there's code here]
   end
 
