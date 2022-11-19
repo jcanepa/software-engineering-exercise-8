@@ -1,6 +1,5 @@
 #! /usr/bin/env ruby
 
-require_relative 'app/player'
 require_relative 'app/group'
 require_relative 'app/games/poker'
 require_relative 'app/games/go'

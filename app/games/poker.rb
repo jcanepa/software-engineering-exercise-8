@@ -11,9 +11,8 @@ class Poker < Game
 
   def play()
     puts 'Players in the poker game:'
-    # print players & their hands
-    # @players.count().times { |i| print_infoputs "#{self.players.print_info()}, hand: #{self.get_player_hand(i)}" }
-    @players.print_player_names()
+    hands_str = @hands.map { |h| h ? h : 'hand is empty'}
+    @players.print_player_names_with(hands_str)
     # [pretend there's code here]
   end
 
